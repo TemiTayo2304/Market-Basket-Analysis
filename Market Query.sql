@@ -23,10 +23,6 @@ sp_rename 'QVI_transaction_data.PROD_QTY', 'production_quantity','column'
 sp_rename 'QVI_transaction_data.TOT_SALES', 'total_sales','column'
 sp_rename 'transaction_data.tax_id', 'transaction_id', 'column'
 
--- View datasets
-SELECT * FROM transaction_data
-SELECT * FROM purchase_behaviour_data
-
 
 -- To get rid of the space
 SELECT 'product_name', REPLACE('product_name','  ',' ')
@@ -40,7 +36,8 @@ FROM transaction_data;
 SELECT product_name, substring(product_name,1,len('__________________ %'))
 from transaction_data
 
-
+-- View dataset
+SELECT * FROM transaction_data
 
 -- Market Basket Analysis
 -- What are the most frequently bought together products?
