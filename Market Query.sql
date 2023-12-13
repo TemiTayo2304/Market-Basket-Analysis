@@ -24,7 +24,7 @@ sp_rename 'QVI_transaction_data.TOT_SALES', 'total_sales','column'
 sp_rename 'transaction_data.tax_id', 'transaction_id', 'column'
 
 
--- To get rid of the space
+-- To get rid of the space (failed attempt)
 SELECT 'product_name', REPLACE('product_name','  ',' ')
 from transaction_data
 SELECT product_name, TRIM(LTRIM(RTRIM(product_name)))
